@@ -7,9 +7,8 @@
 5. symbol link & hard link
 6. forward declaration
 7. github awesome
-8. getTempFile
-9. node pkg打包
-10. marp
+8. node pkg打包
+9.  marp
 
 ## project
 1. json benchmark

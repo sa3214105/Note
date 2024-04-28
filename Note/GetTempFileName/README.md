@@ -10,11 +10,15 @@
 
 ## 潛藏問題
 ### 這兩個方法都會建立空檔案，而不僅是只提供檔名。
-   * win32 ![cppCreateFile.JPG](cppCreateFile.JPG)
-   * C# ![CSharpCreateFile.JPG](CSharpCreateFile.JPG)
+   #### win32 
+   ![cppCreateFile.JPG](cppCreateFile.JPG)
+   #### C# 
+   ![CSharpCreateFile.JPG](CSharpCreateFile.JPG)
 ### 無法建立超過65535個檔案。
-   * win32 ![cpp65535limit.JPG](cpp65535limit.JPG)
-   * C# ![CSharp65535limit.JPG](CSharp65535limit.JPG)
+   #### win32
+   ![cpp65535limit.JPG](cpp65535limit.JPG)
+   #### C# 
+   ![CSharp65535limit.JPG](CSharp65535limit.JPG)
 ### 效能問題
    文件中均有提到這兩個方法在建立大量檔案時會產生效能瓶頸，這邊有使用c++API做一個簡單測試。
 
@@ -22,7 +26,7 @@
    ![Benchmark.png](Benchmark.png)
 
 ## 解決以上問題的方法
-其實官方文檔就有提到一些對應措施了
+其實官方文檔就有提到一些對應措施了。
 1. 使用GUID作為文件名稱。
 2. 使用Path.GetRandomFileName(C#)，須注意此方法不會建立檔案。
 3. 
